@@ -18,7 +18,7 @@ function encodeArrayOfStrings(strings) {
   bytes = new Uint8Array(len);
   view = new DataView(bytes.buffer);
   offset = 0;
-
+ 
   view.setUint32(offset, strings.length);
   offset += Uint32Array.BYTES_PER_ELEMENT;
   for (i = 0; i < encoded.length; i += 1) {
